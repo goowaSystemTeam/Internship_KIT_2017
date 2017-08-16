@@ -1,0 +1,12 @@
+topic: ~1.4()
+language: jpj
+
+u:(e:onStart)\vct=135\\rspd=110\\pau=3000\当社でやりたいこと・挑戦したいことを20秒で説明してください。
+
+    #あったら
+    u1:(e:Dialog/NotUnderstood)\pau=15000\ありがとうこざいます。$onStopped=1        
+                                                      
+                                          
+    #なかったら
+    u1:(e:Dialog/NotSpeaking10)返答がないので、面接を終了します。$onStopped=2
+            

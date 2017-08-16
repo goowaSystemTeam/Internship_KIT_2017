@@ -1,0 +1,17 @@
+topic: ~hajimenoaisatsu()
+language: jpj
+
+concept:(yes)[はい おねがいします よろしくおねがいします]
+
+#始めの挨拶
+u:(e:onStart)\vct=135\\rspd=110\席にお座りください。\pau=5000\これから面接を始めます。\pau=3000\よろしくお願いします
+
+        #よろしくという返答があったら
+        u1:(e:Dialog/NotUnderstood)お願いします。\pau=2000\$onStopped=1
+            
+         
+            
+         #よろしくという返答がなかったら
+        u1:(e:Dialog/NotSpeaking5)返事がないので、面接を終了します。\pau=2000\$onStopped=2
+      
+           

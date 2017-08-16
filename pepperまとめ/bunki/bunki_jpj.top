@@ -1,0 +1,10 @@
+topic: ~bunki()
+language: jpj
+
+u:(e:onStart)$tensu = $tensu1+$tensu2+$tensu3+$tensu4
+
+    u1:($tensu>30)\vct=135\\rspd=110\あなたは合格です。          
+                                                      
+                                         
+    u1:($tensu<30)\vct=135\\rspd=110\あなたは不合格です。
+

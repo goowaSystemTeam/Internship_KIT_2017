@@ -1,0 +1,12 @@
+topic: ~1.2()
+language: jpj
+
+u:(e:onStart)\vct=135\\rspd=110\自己紹介を20秒でお願いします。
+
+
+     #何かを言ったら
+     u1:(e:Dialog/NotUnderstood)\pau=15000\ありがとうございます。$onStopped=1
+     
+
+     #5秒間何もを言わなかったら   
+     u1:(e:Dialog/NotSpeaking5)返事がないので、面接を終了します。。$onStopped=2

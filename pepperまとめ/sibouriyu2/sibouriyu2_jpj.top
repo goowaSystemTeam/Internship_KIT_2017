@@ -1,0 +1,11 @@
+topic: ~sibouriyu2()
+language: jpj
+
+#自己紹介がなかったら
+u:(e:onStart)\vct=135\\rspd=110\返答がないので、次に進みます。\pau=2000\当社を志望した理由を30秒で説明してください。\pau=3000\
+
+    #志望理由があったら
+    u1:(e:Dialog/NotUnderstood)ありがとうこざいます。\pau=3000\当社でやりたいこと・挑戦したいことを30秒で説明してください。$onStopped=1
+                                 
+    #志望理由がなかったら
+    u1:(e:Dialog/NotSpeaking10)返答がないので、次に進みます。当社でやりたいこと・挑戦したいことを30秒で説明してください。$onStopped=1

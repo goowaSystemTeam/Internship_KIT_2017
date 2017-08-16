@@ -1,0 +1,15 @@
+topic: ~sibouriyu()
+language: jpj
+
+
+#自己紹介があったら
+u:(e:onStart)\vct=135\\rspd=110\\pau=3000\当社を志望した理由を20秒で説明してください。
+
+    #志望理由があったら
+    u1:(e:Dialog/NotUnderstood)\pau=15000\ありがとうこざいます。$onStopped=1          
+                                                      
+                                          
+    #志望理由がなかったら
+    u1:(e:Dialog/NotSpeaking10)返事がないので、面接を終了します。。$onStopped=2
+    
+            
